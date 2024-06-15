@@ -15,9 +15,10 @@ const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
 
   const handleSignUp = () => {
+    console.log(isSignInForm);
     setIsSignInForm(!isSignInForm);
   }
-  
+
   return (
     <>
       <Header />
@@ -37,20 +38,20 @@ const Login = () => {
             </Typography>
 
             <Grid container spacing={3} alignItems="center">
-              {!isSignInForm && <Grid item xs={12}> <TextField 
+              {!isSignInForm && <Grid item xs={12}> <TextField
                 id="name"
                 // type="text"
                 label="Full name"
                 fullWidth
                 className="bg-gray-700"
-                /> </Grid>}
-              {!isSignInForm && <Grid item xs={12}> <TextField 
+              /> </Grid>}
+              {!isSignInForm && <Grid item xs={12}> <TextField
                 id="name"
                 type="number"
                 label="Phone no"
                 fullWidth
                 className="bg-gray-700"
-                /> </Grid>}
+              /> </Grid>}
               <Grid item xs={12}>
                 <TextField
                   id="email"
